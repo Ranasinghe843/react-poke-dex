@@ -7,8 +7,13 @@ function App() {
   return (
     <>
     <Intro />
+    <br></br>
     <Team />
+    <br></br>
     <Poke />
+    <footer>
+      <p>Created by Samitha Ranasinghe</p>
+    </footer>
     </>
   );
 }
