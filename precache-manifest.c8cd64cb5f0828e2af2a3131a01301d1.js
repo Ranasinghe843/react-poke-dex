@@ -1,7 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "a0b6554e9bbd9eb82e08",
-    "url": "/react-poke-dex/static/js/main.a0b6554e.chunk.js"
+    "revision": "aa70e53e8aadf7d45667",
+    "url": "/react-poke-dex/static/css/main.11a1a0be.chunk.css"
+  },
+  {
+    "revision": "aa70e53e8aadf7d45667",
+    "url": "/react-poke-dex/static/js/main.aa70e53e.chunk.js"
   },
   {
     "revision": "8654e7e83f475fb519e8",
@@ -12,7 +16,7 @@ self.__precacheManifest = [
     "url": "/react-poke-dex/static/js/runtime~main.4574d7bc.js"
   },
   {
-    "revision": "05feb8c10fa9c8daa3669167ef686eb4",
+    "revision": "c49e141b4d4035d92c611b991fb80526",
     "url": "/react-poke-dex/index.html"
   }
 ];

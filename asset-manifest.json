@@ -1,11 +1,13 @@
 {
-  "main.js": "/react-poke-dex/static/js/main.a0b6554e.chunk.js",
-  "main.js.map": "/react-poke-dex/static/js/main.a0b6554e.chunk.js.map",
+  "main.css": "/react-poke-dex/static/css/main.11a1a0be.chunk.css",
+  "main.js": "/react-poke-dex/static/js/main.aa70e53e.chunk.js",
+  "main.js.map": "/react-poke-dex/static/js/main.aa70e53e.chunk.js.map",
   "static/js/1.8654e7e8.chunk.js": "/react-poke-dex/static/js/1.8654e7e8.chunk.js",
   "static/js/1.8654e7e8.chunk.js.map": "/react-poke-dex/static/js/1.8654e7e8.chunk.js.map",
   "runtime~main.js": "/react-poke-dex/static/js/runtime~main.4574d7bc.js",
   "runtime~main.js.map": "/react-poke-dex/static/js/runtime~main.4574d7bc.js.map",
+  "static/css/main.11a1a0be.chunk.css.map": "/react-poke-dex/static/css/main.11a1a0be.chunk.css.map",
   "index.html": "/react-poke-dex/index.html",
-  "precache-manifest.b65b8fb3ed243882b599d0d2816a53f7.js": "/react-poke-dex/precache-manifest.b65b8fb3ed243882b599d0d2816a53f7.js",
+  "precache-manifest.c8cd64cb5f0828e2af2a3131a01301d1.js": "/react-poke-dex/precache-manifest.c8cd64cb5f0828e2af2a3131a01301d1.js",
   "service-worker.js": "/react-poke-dex/service-worker.js"
 }
