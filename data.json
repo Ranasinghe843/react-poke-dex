@@ -1,0 +1,26 @@
+{
+    "fall2020" : {
+      "url" : "https://pokeapi.co/api/v2/pokemon/1/",
+      "timestamp" : "WebEx"
+    },
+    "spring2021" : {
+      "url" : "https://pokeapi.co/api/v2/pokemon/2/",
+      "timestamp" : "WebEx"
+    },
+    "fall2021" : {
+      "url" : "https://pokeapi.co/api/v2/pokemon/3/",
+      "timestamp" : "WebEx"
+    },
+    "spring2022" : {
+      "url" : "https://pokeapi.co/api/v2/pokemon/4/",
+      "timestamp" : "WebEx"
+    },
+    "fall2022" : {
+      "url" : "https://pokeapi.co/api/v2/pokemon/4/",
+      "timestamp" : "WebEx"
+    },
+    "spring2023" : {
+      "url" : "https://pokeapi.co/api/v2/pokemon/2/",
+      "timestamp" : "WebEx"
+    }
+  }

@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Card.css';
+import { database } from '../database.js';
+import { set, remove, ref } from 'firebase/database';
 
-export default function Card(props) {
+function Card(props) {
 
     const [pokemonCard, setPokemonCard] = useState(null)
 
     // getAPIData gets the data from the pokeapi, returns an array of pokemon
     const getAPIData = async () => {
         /* START OF API CALLING. MODIFY AT YOUR OWN RISK */
-        const url = props.pokemon.url; // URL of the API
+        const url = props.url; // URL of the API
         const response = await fetch(url); // Get the data from the PokeAPI
         const responseJSON = await response.json(); // Turn the data into a JSON object that we can use
 
-        const types = responseJSON.types.map((item) => <div poke-type="{{item.type.name}}" class="type">Type: {item.type.name}</div>);
+        const types = responseJSON.types.map((item) => <div className="type">Type: {item.type.name}</div>);
 
         // This should seem familiar
         const pokeCard = (
@@ -21,12 +23,11 @@ export default function Card(props) {
                 <img src={responseJSON.sprites.front_default} alt="front_default"></img>
                 <img src={responseJSON.sprites.front_shiny} alt="front_default"></img>
             </div>
-            <h4>{props.pokemon.name}</h4>
+            <h4>{responseJSON.species.name}</h4>
             <p>Height: {responseJSON.height}</p>
             <p>Weight: {responseJSON.weight}</p>
             <p>Base XP: {responseJSON.base_experience}</p>
             {types}
-            <button>Add to my Team</button>
             <p> </p>
             </>
         )
@@ -40,10 +41,61 @@ export default function Card(props) {
         getAPIData()
     }, [])
 
+  return (<>{pokemonCard}</>);
+}
+
+function Teamcard(props) {
+  
+  const deleteData = () => {
+    const dataRef = ref(database, props.keyPoke);
+    remove(dataRef)
+    .then(() => {
+        console.log("Remove was successful");
+    })
+    .catch((error) => {
+        console.log("Remove failed");
+        console.log(error);
+    });
+}
+  
   return (
-    <div class="card">
-      {/* For checkpoint 1: You need to add props.pokemon to this card*/}
-      {pokemonCard}
+    <div className="Card">
+      <Card url={props.url}/>
+      <p>Added at:</p>
+      <p>{props.timestamp}</p>
+      <button onClick={deleteData}>Remove from My Team</button>
+      <p></p>
     </div>
   );
 }
+
+function Catalogcard(props) {
+
+  const createData= () => {
+    let data = {
+        url: props.url,
+        timestamp: (new Date()).toISOString(),
+    }
+    const randNum = Math.round(Math.random() * 1000000)
+    const dataRef = ref(database, randNum.toString());
+    set(dataRef, data)
+    .then(() => {
+        console.log("Set was successful");
+    })
+    .catch((error) => {
+        console.log("Set failed");
+        console.log(error);
+    });
+  }
+
+  return (
+    <div className="Card">
+      <Card url={props.url}/>
+      <button onClick={createData}>Add to My Team</button>
+      <p></p>
+    </div>
+  );
+}
+
+export default Card;
+export { Teamcard, Catalogcard };
