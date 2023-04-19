@@ -1,13 +1,13 @@
 {
-  "main.css": "/react-poke-dex/static/css/main.8b0556bb.chunk.css",
-  "main.js": "/react-poke-dex/static/js/main.4491b343.chunk.js",
-  "main.js.map": "/react-poke-dex/static/js/main.4491b343.chunk.js.map",
-  "static/js/1.e91f776e.chunk.js": "/react-poke-dex/static/js/1.e91f776e.chunk.js",
-  "static/js/1.e91f776e.chunk.js.map": "/react-poke-dex/static/js/1.e91f776e.chunk.js.map",
+  "main.css": "/react-poke-dex/static/css/main.ac81e92d.chunk.css",
+  "main.js": "/react-poke-dex/static/js/main.6ba5c13a.chunk.js",
+  "main.js.map": "/react-poke-dex/static/js/main.6ba5c13a.chunk.js.map",
+  "static/js/1.a5745689.chunk.js": "/react-poke-dex/static/js/1.a5745689.chunk.js",
+  "static/js/1.a5745689.chunk.js.map": "/react-poke-dex/static/js/1.a5745689.chunk.js.map",
   "runtime~main.js": "/react-poke-dex/static/js/runtime~main.4574d7bc.js",
   "runtime~main.js.map": "/react-poke-dex/static/js/runtime~main.4574d7bc.js.map",
-  "static/css/main.8b0556bb.chunk.css.map": "/react-poke-dex/static/css/main.8b0556bb.chunk.css.map",
+  "static/css/main.ac81e92d.chunk.css.map": "/react-poke-dex/static/css/main.ac81e92d.chunk.css.map",
   "index.html": "/react-poke-dex/index.html",
-  "precache-manifest.e802bdff375f864557ed08e8c35c33a1.js": "/react-poke-dex/precache-manifest.e802bdff375f864557ed08e8c35c33a1.js",
+  "precache-manifest.386d8129d33f2dba309a1c1183d437bf.js": "/react-poke-dex/precache-manifest.386d8129d33f2dba309a1c1183d437bf.js",
   "service-worker.js": "/react-poke-dex/service-worker.js"
 }
