@@ -9,6 +9,7 @@ export default function Intro() {
             <h1>Pokemon PokeDex Viewer - Intermediate</h1>
             <img src='https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png' alt='React Logo' id='logo' height='100' width='100'></img>
             <p>Developed as the Final Project for Software Saturdays Spring 2023</p>
+            <p>Find the Github repository <a href="https://github.com/Ranasinghe843/react-poke-dex/tree/master">here</a></p>
         </div>
     )
 
