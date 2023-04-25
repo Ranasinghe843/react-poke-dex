@@ -37,17 +37,13 @@ export default function Team() {
         }
     }, [])
 
-    const Poke = (
-        <div className="wrapper">
-            { pokemonCards }
-        </div>
-    )
-
     return (
         <>
         <hr className="line"></hr>
         <h2 id='title'>My Team:</h2>
-        {Poke}
+        <div className="wrapper">
+            { pokemonCards }
+        </div>
         <hr className="line"></hr>
         </>
   );

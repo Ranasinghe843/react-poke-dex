@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../styles/Card.css';
 import { database } from '../database.js';
-import { set, remove, ref } from 'firebase/database';
+import { set, remove, ref, onValue } from 'firebase/database';
 
 function Card(props) {
 
@@ -71,21 +71,43 @@ function Teamcard(props) {
 
 function Catalogcard(props) {
 
+  let teamSize = 0;
+
   const createData= () => {
-    let data = {
+    const dataRef = ref(database, '/');
+    onValue(dataRef, (snap) => {
+      // This is just a complicated iterative process
+       //     to read all the data from the database and
+      //     print it to the console. Your data reads
+      //     will use a similar loop, but probably
+      //     not two of them
+
+      if (snap.val() == null) {
+        teamSize = 0
+      } else {
+        teamSize = Object.keys(snap.val()).length
+      }})
+
+      console.log(teamSize)
+
+    if (teamSize < 6) {
+
+      let data = {
         url: props.url,
         timestamp: (new Date()).toISOString(),
+      }
+      const randNum = Math.round(Math.random() * 1000000)
+      const dataRef = ref(database, randNum.toString());
+      set(dataRef, data)
+      .then(() => {
+          console.log("Set was successful");
+      })
+      .catch((error) => {
+          console.log("Set failed");
+          console.log(error);
+      });
+
     }
-    const randNum = Math.round(Math.random() * 1000000)
-    const dataRef = ref(database, randNum.toString());
-    set(dataRef, data)
-    .then(() => {
-        console.log("Set was successful");
-    })
-    .catch((error) => {
-        console.log("Set failed");
-        console.log(error);
-    });
   }
 
   return (
